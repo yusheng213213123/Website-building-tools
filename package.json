@@ -1,7 +1,7 @@
 {
   "name": "web-cli",
   "version": "1.0.0",
-  "description": "web脚手架",
+  "description": "A scaffolding tool for building websites",
   "main": "index.js",
   "private": "true",
   "scripts": {
@@ -10,7 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
   },
   "keywords": [
-    "web"
+    "website","website-cli"
   ],
   "author": "百炼_张翼",
   "license": "ISC",
