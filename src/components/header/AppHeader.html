@@ -1,0 +1,168 @@
+<style>
+    .app-header {
+        padding: 0 110px;
+        height: 154px;
+        background: #fff;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        box-sizing: border-box;
+    }
+
+    .app-header-top {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .app-header-bottom {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .app-header-bottom .nav-items {
+        padding: 0 20px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .app-header-bottom .nav-items a {
+        font-size: 28px;
+        color: #5E5E5E;
+    }
+
+    .app-header-bottom .nav-items:hover a {
+        color: #3376FF;
+    }
+
+    .app-header-bottom .nav-items:hover::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        background: #3376FF;
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .header-action-box {
+        padding-right: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .header-action-login {
+        color: #3376FF;
+        padding: 0 8px;
+        cursor: pointer;
+    }
+
+    .header-action-register {
+        padding: 0 8px;
+        cursor: pointer;
+        border-left: 1px solid #DCD7D7
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .children_list {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: #fff;
+        border-radius: 6px;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    .children_list {
+        padding: 24px;
+    }
+
+    .nav-items:hover .children_list {
+        display: block;
+        box-shadow: 0px 2px 8px 0px rgba(109, 109, 109, 0.1);
+    }
+
+    .children_list a {
+        font-size: 17px !important;
+        display: block;
+        text-align: center;
+        color: #5E5E5E !important;
+    }
+
+    .children_list a:hover {
+        color: #487BF1 !important;
+    }
+</style>
+<div class="app-header">
+    <div class="app-header-top">
+        <img src="../../images/bl_logo.png" style="height: 58px">
+        <div class="header-action-box">
+            <span class="header-action-login">立即登录</span>
+            <span class="header-action-register">会员注册</span>
+        </div>
+    </div>
+    <div class="app-header-bottom">
+        <div class="nav-items">
+            <a href="/home.html">首页</a>
+        </div>
+        <div class="nav-items">
+            <a href="/shoppingdetails.html">采购信息</a>
+        </div>
+        <div class="nav-items">
+            <a href="/sale.html">销售信息</a>
+        </div>
+        <div class="nav-items">
+            <a href="/logistics.html">物流追踪</a>
+        </div>
+        <div class="nav-items">
+            <a href="/finance.html">金融服务</a>
+        </div>
+        <div class="nav-items">
+            <a href="/service.html">报关服务</a>
+        </div>
+        <div class="nav-items">
+            <a href="/box.html">集装箱租赁</a>
+        </div>
+        <div class="nav-items">
+            <a href="/connecttransport.html">多式联运</a>
+        </div>
+        <div class="nav-items">
+            <a href="/contact.html">我的</a>
+        </div>
+        <div class="nav-items">
+            <a href="/connectreceiver.html">联系客服</a>
+        </div>
+        <div class="nav-items">
+            <a href="/livebroadcast.html">直播</a>
+        </div>
+        <div class="nav-items">
+            <a href="javascript:void(0);">蒙古磅单</a>
+            <ul class="children_list">
+                <li>
+                    <a href="/iframe.html">蒙古磅单录入</a>
+                </li>
+            </ul>
+        </div>
+    </div>

@@ -1,0 +1,84 @@
+@charset "UTF-8";
+.home-top {
+  background-image: url("../images/logistics-login-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.login-inp {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  background-color: #F0F1F4;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.login-inp ::placeholder {
+  color: #6E757C;
+}
+
+.login-button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #3544F8;
+  color: #fff;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.login-button:hover {
+  background: rgba(53, 68, 248, 0.9);
+}
+
+.custom-checkbox input[type=checkbox] {
+  display: none;
+}
+
+/* 定义自定义复选框的外观 */
+.custom-checkbox .checkmark {
+  display: inline-block;
+  width: 20px; /* 复选框的宽度 */
+  height: 20px; /* 复选框的高度 */
+  background: #eee; /* 未选中状态下的背景色 */
+  margin-right: 8px; /* 与文本的距离 */
+  border-radius: 4px; /* 圆角 */
+  position: relative;
+  cursor: pointer;
+}
+
+/* 当复选框被选中时 */
+.custom-checkbox input[type=checkbox]:checked + .checkmark {
+  background: #557EEB; /* 选中状态下的背景色 */
+}
+
+/* 复选框内部的对勾图标 */
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg); /* 对勾的形状和方向 */
+}
+
+/* 当复选框被选中时显示对勾图标 */
+.custom-checkbox input[type=checkbox]:checked + .checkmark:after {
+  display: block;
+}
+
+.home-chart-left {
+  background-image: url("../images/icon-bg-1.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=home.css.map */
