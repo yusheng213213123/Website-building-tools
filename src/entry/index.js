@@ -5,7 +5,6 @@ import "../components/header/AppHeader.js";
 /**
  * 公共库
  */
-import $ from "jquery";
 import * as echarts from "echarts";
 /**
  * 公共js文件
