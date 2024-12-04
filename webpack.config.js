@@ -147,7 +147,7 @@ module.exports = {
     host: "localhost",
     open: true,
     hot: true, // 开启hmr
-    port: 3002,
+    port: 3000,
     historyApiFallback: true,
   },
   devtool: envir == "production" ? "source-map" : "cheap-module-source-map",
