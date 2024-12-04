@@ -6,7 +6,10 @@ export const htmlMap = [
   {
     path: "/",
     entry: () => import("/src/entry/index.js"),
-    cssListFunc: [() => import("/src/css/main.css")],
+    cssListFunc: [
+      // 不需要立即引入的样式表
+      () => import("/src/css/animate.css"),
+    ],
   },
 ];
 
