@@ -6,10 +6,10 @@ export const htmlMap = [
   {
     path: "/",
     entry: () => import("/src/entry/index.js"),
-    cssListFunc: [() => import("/src/css/main.css")],
+    // 加载次级css或者非首屏css
+    cssListFunc: [],
   },
 ];
-
 export const loadCss = (path) => {
   for (let i = 0; i < htmlMap.length; i++) {
     pageConfig = htmlMap[i];
@@ -25,7 +25,6 @@ export const loadCss = (path) => {
     }
   }
 };
-
 export const loadResource = async () => {
   if (pageConfig) {
     try {

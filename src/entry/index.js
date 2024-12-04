@@ -1,4 +1,8 @@
 /**
+ * 为了渲染更快，组件最好优先加载
+ */
+import "../components/header/AppHeader.js";
+/**
  * 公共库
  */
 import $ from "jquery";
@@ -8,10 +12,7 @@ import * as echarts from "echarts";
  */
 import "../js/unocss.js";
 import "../js/zoom.js";
-/**
- * 组件
- */
-import "../components/header/AppHeader.js";
+
 /**
  * 导出mounted函数可以获取search params
  */

@@ -26,7 +26,7 @@ module.exports = {
         ? "js/[name].[contenthash:10].chunk.js"
         : "js/[name].chunk.js",
     path: envir == "production" ? path.resolve(__dirname, "dist") : undefined,
-    assetModuleFilename: "assets/[contenthash:10][ext][query]",
+    assetModuleFilename: "images/[name][ext][query]",
     clean: envir == "production" ? true : false,
   },
   module: {
@@ -77,8 +77,8 @@ module.exports = {
               },
               // {
               //   tag: "link",
-              //   attribute: "href",
-              //   type: "src",
+              //   attribute: "src",
+              //   type: "srcset",
               // },
             ],
           },
@@ -93,26 +93,30 @@ module.exports = {
         filename: "css/[name].[contenthash:10].css",
         chunkFilename: "css/[name].[contenthash:10].chunk.css",
       }),
-    envir == "production" &&
-      new CopyPlugin({
-        patterns: [
-          {
-            from: path.resolve(__dirname, "./src/static"),
-            to: path.resolve(__dirname, "./dist/static"),
-            globOptions: {
-              ignore: ["**/*.html"],
-            },
+    // envir == "production" &&
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "./src/static"),
+          to: path.resolve(__dirname, "./dist/static"),
+          globOptions: {
+            ignore: ["**/*.html"],
           },
-        ],
-      }),
+        },
+        {
+          from: path.resolve(__dirname, "./src/css"),
+          to: path.resolve(__dirname, "./dist/css"),
+        },
+        {
+          from: path.resolve(__dirname, "./src/images"),
+          to: path.resolve(__dirname, "./dist/images"),
+        },
+      ],
+    }),
   ].filter(Boolean),
   optimization: {
     minimize: envir == "production",
-    minimizer: [
-      // css , js压缩
-      new CssMinimizer(),
-      new TerserPlugin(),
-    ],
+    minimizer: [new CssMinimizer(), new TerserPlugin()],
     splitChunks: {
       chunks: "all",
       cacheGroups: {
@@ -143,7 +147,7 @@ module.exports = {
     host: "localhost",
     open: true,
     hot: true, // 开启hmr
-    port: 3000,
+    port: 3002,
     historyApiFallback: true,
   },
   devtool: envir == "production" ? "source-map" : "cheap-module-source-map",
