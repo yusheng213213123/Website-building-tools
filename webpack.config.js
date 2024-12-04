@@ -36,6 +36,14 @@ module.exports = {
         use: [
           envir == "production" ? MiniCssExtract.loader : "style-loader",
           "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: ["postcss-preset-env"],
+              },
+            },
+          },
         ],
       },
       {
@@ -43,6 +51,14 @@ module.exports = {
         use: [
           envir == "production" ? MiniCssExtract.loader : "style-loader",
           "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: ["postcss-preset-env"],
+              },
+            },
+          },
           "less-loader",
         ],
       },
