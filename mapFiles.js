@@ -6,8 +6,15 @@ export const htmlMap = [
   {
     path: "/",
     entry: () => import("/src/entry/index.js"),
+<<<<<<< HEAD
     // 加载次级css或者非首屏css
     cssListFunc: [],
+=======
+    cssListFunc: [
+      // 不需要立即引入的样式表
+      () => import("/src/css/animate.css"),
+    ],
+>>>>>>> 968d5ca75b41d5d39fe4dfce32bb3fc8745c46f6
   },
 ];
 export const loadCss = (path) => {
