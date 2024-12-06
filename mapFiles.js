@@ -16,7 +16,6 @@ export const loadResource = async () => {
     routeName = "/";
   }
   for (let i = 0; i < htmlMap.length; i++) {
-    console.log(htmlMap[i]["path"], routeName);
     if (htmlMap[i]["path"] == routeName) {
       pageConfig = htmlMap[i];
       break;
