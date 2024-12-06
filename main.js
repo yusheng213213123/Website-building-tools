@@ -1,8 +1,7 @@
 /**
  * 所有页面公共入口
  */
-import { htmlMap, loadCss, loadResource } from "./mapFiles.js";
-loadCss(location.pathname);
+import { htmlMap, loadResource } from "./mapFiles.js";
 import "core-js";
 import $ from "jquery";
 if (window) {

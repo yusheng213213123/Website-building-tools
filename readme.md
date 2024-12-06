@@ -13,11 +13,7 @@ It can efficiently optimize code chunks, compress code, handle JavaScript, CSS s
     export const htmlMap = [
         {
             path: "/",
-            entry: () => import("/src/entry/index.js"),
-            cssListFunc: [
-                () => import("/src/css/animate.css"),
-            ],
-
+            entry: () => import("/src/entry/index.js")
         },
     ];
 
@@ -34,9 +30,7 @@ Mount onto a global object so that other libraries that use this object can use 
 1. example
 
    ```
-   import { htmlMap, loadCss, loadResource } from "./mapFiles.js";
-   // 加载次级 CSS
-   loadCss(location.pathname);
+   import { htmlMap, loadResource } from "./mapFiles.js";
    import "core-js";
    import $ from "jquery";
    if (window) {
