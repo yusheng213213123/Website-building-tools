@@ -9,11 +9,10 @@ export const htmlMap = [
 ];
 export const loadResource = async () => {
   let pageConfig = null;
-  let routeName = "";
-  if (location.pathname.indexOf(".html") != -1) {
-    routeName = location.pathname.split(".html")[0];
-  } else {
+  let routeName = top.location.pathname.split(".html")[0];
+  if (top.location.href.indexOf("index.html") != -1) {
     routeName = "/";
+    location.href = "/";
   }
   for (let i = 0; i < htmlMap.length; i++) {
     if (htmlMap[i]["path"] == routeName) {
@@ -21,6 +20,7 @@ export const loadResource = async () => {
       break;
     }
   }
+
   if (pageConfig) {
     try {
       const resource = await pageConfig.entry();
